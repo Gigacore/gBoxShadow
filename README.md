@@ -2,7 +2,7 @@ gBoxShadow.js
 ============
 ###### Enable gravity to your "box-shadow" CSS property.
 
-gBoxShadow.js induces gravity to the CSS "box-shadow" property and seemlessly changes the direction based on the device motion data retrived from accelerometer and gyroscope. This adds a natural experience to the UI, especially when used with Material Design.
+gBoxShadow.js induces gravity to the CSS "box-shadow" property and seamlessly changes the direction based on the device motion data retrived from accelerometer and gyroscope. This adds a natural experience to the UI, especially when used with Material Design.
 
 The plugin uses ```DeviceMotionEvent``` and ```DeviceOrientationEvent``` Web APIs to detect the moment of your device. gBoxShadow.js is built on top of [gyronorm.js](https://github.com/dorukeker/gyronorm.js) to enable consistency of data across different devices.
 
