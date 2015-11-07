@@ -26,7 +26,7 @@ Setup
 	box-shadow: 10px 10px 15px #A01818;
 ```
 
-######4. Ensure to define the same color and blur values to your HTML element using ```data-shadow-color``` and ```data-shadow-blur```:
+######4. Ensure to define the same color and blur values in your HTML using ```data-shadow-color``` and ```data-shadow-blur```:
 
 ```HTML
 	<div class="g-enabled btn" data-shadow-color="#A01818" data-shadow-blur="15">I am a button</div>
