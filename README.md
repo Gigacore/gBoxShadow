@@ -23,7 +23,9 @@ Setup
 ######3. Apply ```box-shadow``` styling of your choice to the element in your CSS:
 
 ```CSS
-	box-shadow: 10px 10px 15px #A01818;
+	.btn {
+		box-shadow: 10px 10px 15px #A01818;
+	}
 ```
 
 ######4. Ensure to define the same color and blur values in your HTML using ```data-shadow-color``` and ```data-shadow-blur```:
