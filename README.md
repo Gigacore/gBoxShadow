@@ -41,9 +41,11 @@ The plugin applies the effect only to the devices that support ```DeviceMotionEv
 ![Screenshot](http://i.imgur.com/HAPTQhT.png)
 
 
-Demo
+Demos
 ===================
-http://gigacore.github.io/demos/gBoxShadow/
+Live: http://gigacore.github.io/demos/gBoxShadow/
+
+Video: https://youtu.be/vkKDyIstcb0
 
 License
 ===================
