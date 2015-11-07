@@ -36,7 +36,7 @@ Setup
 
 Fallback for unsupported devices
 ===================
-The plugin applies the effect only to the devices that support ```DeviceMotionEvent``` and ```DeviceOrientationEvent``` Web APIs. To those that doesn't, it picks the ```box-shadow``` property from the CSS file that you added.
+The plugin applies the effect only to the devices that support ```DeviceMotionEvent``` and ```DeviceOrientationEvent``` Web APIs. To those that doesn't, the ```box-shadow``` property you set in the CSS will be applied.
 
 ![Screenshot](http://i.imgur.com/HAPTQhT.png)
 
