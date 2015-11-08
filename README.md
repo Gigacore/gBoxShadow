@@ -9,7 +9,7 @@ The plugin uses ```DeviceMotionEvent``` and ```DeviceOrientationEvent``` Web API
 ![Screenshot](http://i.imgur.com/U1iuGjE.gif)
 
 ######NOTE: 
-This is a concept / experimental work. The idea is to introduce real-world entity to UI/UX. [Four Shadows](https://github.com/Gigacore/four-shadows) is one such attempt that I tried last year, but that was time-aware and nothing to do with physical entity. It is not recommended to use with your production app, but no harm in trying as the fallback will always ensure that nothing breaks though.
+This is a concept / experimental work. The idea is to re-introduce real-world entity to UI/UX in an much more interactive and intuitive way. [Four Shadows](https://github.com/Gigacore/four-shadows) is one such attempt that I tried last year, but that was time-aware and nothing to do with physical entity. It is not recommended to use with your production app, but no harm in trying as the fallback will always ensure that nothing breaks though.
 
 Setup
 ============
