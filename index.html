@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>gBoxShadow.js by Gigacore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">gBoxShadow.js</h1>
+      <h2 class="project-tagline">Gravity-sensing box-shadow for Flat UI</h2>
+      <a href="https://github.com/Gigacore/gBoxShadow" class="btn">View on GitHub</a>
+      <a href="https://github.com/Gigacore/gBoxShadow/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Gigacore/gBoxShadow/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="gboxshadowjs" class="anchor" href="#gboxshadowjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>gBoxShadow.js</h1>
+
+<h6>
+<a id="enable-gravity-to-your-box-shadow-css-property" class="anchor" href="#enable-gravity-to-your-box-shadow-css-property" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enable gravity to your "box-shadow" CSS property.</h6>
+
+<p>gBoxShadow.js induces gravity to the CSS "box-shadow" property and seamlessly changes the direction based on the device motion data retrived from accelerometer and gyroscope. This adds a natural experience to the UI, especially when used with Material Design.</p>
+
+<p>The plugin uses <code>DeviceMotionEvent</code> and <code>DeviceOrientationEvent</code> Web APIs to detect the moment of your device. gBoxShadow.js is built on top of <a href="https://github.com/dorukeker/gyronorm.js">gyronorm.js</a> to enable consistency of data across different devices.</p>
+
+<p><img src="http://i.imgur.com/U1iuGjE.gif" alt="Screenshot"></p>
+
+<h6>
+<a id="note" class="anchor" href="#note" aria-hidden="true"><span class="octicon octicon-link"></span></a>NOTE:</h6>
+
+<p>This is a concept / experimental work. The idea is to re-introduce real-world entity to UI/UX in an much more interactive and intuitive way. <a href="https://github.com/Gigacore/four-shadows">Four Shadows</a> is one such attempt that I tried last year, but that was time-aware and nothing to do with physical entity. It is not recommended to use with your production app, but no harm in trying as the fallback will always ensure that nothing breaks though.</p>
+
+<h1>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h1>
+
+<h6>
+<a id="1-include-jquery-and-gboxshadowjs-into-your-html-file" class="anchor" href="#1-include-jquery-and-gboxshadowjs-into-your-html-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Include jQuery and <code>gBoxShadow.js</code> into your html file.</h6>
+
+<h6>
+<a id="2-add-the-class-g-enabled-to-the-element" class="anchor" href="#2-add-the-class-g-enabled-to-the-element" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Add the class <code>g-enabled</code> to the element</h6>
+
+<div class="highlight highlight-text-html-basic"><pre>    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>g-enabled btn<span class="pl-pds">"</span></span>&gt;I am a button&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<h6>
+<a id="3-apply-box-shadow-styling-of-your-choice-to-the-element-in-your-css" class="anchor" href="#3-apply-box-shadow-styling-of-your-choice-to-the-element-in-your-css" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Apply <code>box-shadow</code> styling of your choice to the element in your CSS:</h6>
+
+<div class="highlight highlight-source-css"><pre>    <span class="pl-e">.btn</span> {
+        <span class="pl-c1"><span class="pl-c1">box-shadow</span></span>: <span class="pl-c1">10<span class="pl-k">px</span></span> <span class="pl-c1">10<span class="pl-k">px</span></span> <span class="pl-c1">15<span class="pl-k">px</span></span> <span class="pl-c1">#A01818</span>;
+    }</pre></div>
+
+<h6>
+<a id="4-ensure-to-define-the-same-color-and-blur-values-in-your-html-using-data-shadow-color-and-data-shadow-blur" class="anchor" href="#4-ensure-to-define-the-same-color-and-blur-values-in-your-html-using-data-shadow-color-and-data-shadow-blur" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Ensure to define the same color and blur values in your HTML using <code>data-shadow-color</code> and <code>data-shadow-blur</code>:</h6>
+
+<div class="highlight highlight-text-html-basic"><pre>    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>g-enabled btn<span class="pl-pds">"</span></span> <span class="pl-e">data-shadow-color</span>=<span class="pl-s"><span class="pl-pds">"</span>#A01818<span class="pl-pds">"</span></span> <span class="pl-e">data-shadow-blur</span>=<span class="pl-s"><span class="pl-pds">"</span>15<span class="pl-pds">"</span></span>&gt;I am a button&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<h1>
+<a id="fallback-for-unsupported-devices" class="anchor" href="#fallback-for-unsupported-devices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fallback for unsupported devices</h1>
+
+<p>The plugin applies the effect only to the devices that support <code>DeviceMotionEvent</code> and <code>DeviceOrientationEvent</code> Web APIs. To those that doesn't, the <code>box-shadow</code> property you set in the CSS will be applied.</p>
+
+<p><img src="http://i.imgur.com/HAPTQhT.png" alt="Screenshot"></p>
+
+<h1>
+<a id="demos" class="anchor" href="#demos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demos</h1>
+
+<p>Live: <a href="http://gigacore.github.io/demos/gBoxShadow/">http://gigacore.github.io/demos/gBoxShadow/</a></p>
+
+<p>Video: <a href="https://youtu.be/vkKDyIstcb0">https://youtu.be/vkKDyIstcb0</a></p>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p>The MIT License (MIT)</p>
+
+<p>MIT © 2015 Santhosh Sundar</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Gigacore/gBoxShadow">gBoxShadow.js</a> is maintained by <a href="https://github.com/Gigacore">Gigacore</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
