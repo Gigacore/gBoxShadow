@@ -8,21 +8,21 @@ The plugin uses ```DeviceMotionEvent``` and ```DeviceOrientationEvent``` Web API
 
 ![Screenshot](http://i.imgur.com/U1iuGjE.gif)
 
-######NOTE: 
+###### NOTE: 
 This is a concept / experimental work. The idea is to re-introduce real-world entity to UI/UX in an much more interactive and intuitive way. [Four Shadows](https://github.com/Gigacore/four-shadows) is one such attempt that I tried last year, but that was time-aware and had nothing to do with physical entity. It is not recommended to use with your production app, but no harm in trying as the fallback will always ensure that nothing breaks though.
 
 Setup
 ============
 
-######1. Include jQuery and ```gBoxShadow.js``` into your html file.
+###### 1. Include jQuery and ```gBoxShadow.js``` into your html file.
 
-######2. Add the class ```g-enabled``` to the element 
+###### 2. Add the class ```g-enabled``` to the element 
 
 ```HTML
 	<div class="g-enabled btn">I am a button</div>
 ```
 
-######3. Apply ```box-shadow``` styling of your choice to the element in your CSS:
+###### 3. Apply ```box-shadow``` styling of your choice to the element in your CSS:
 
 ```CSS
 	.btn {
@@ -30,7 +30,7 @@ Setup
 	}
 ```
 
-######4. Ensure to define the same color and blur values in your HTML using ```data-shadow-color``` and ```data-shadow-blur```:
+###### 4. Ensure to define the same color and blur values in your HTML using ```data-shadow-color``` and ```data-shadow-blur```:
 
 ```HTML
 	<div class="g-enabled btn" data-shadow-color="#A01818" data-shadow-blur="15">I am a button</div>
